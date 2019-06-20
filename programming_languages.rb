@@ -34,6 +34,15 @@ languages = {
  }
 }
 
+def test_hash(hash)
+  experiment = {}
+  hash[:oo].collect do |key, val|
+    puts key
+    puts val
+  end
+  experiment
+end
+
 
 def new_hash(hash)
   new_hash = {}
