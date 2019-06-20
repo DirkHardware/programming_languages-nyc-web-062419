@@ -35,6 +35,7 @@ languages = {
 }
 
 def new_hash(hash)
+  final_hash = {}
   oo_hash = {}
   func_hash = {}
   hash[:oo].collect do |key, val|
@@ -44,7 +45,7 @@ def new_hash(hash)
     oo_hash[key][:style] = [:oo]
   end
   oo_hash[:javascript][:style] = [:oo, :functional]
-  puts oo_hash
+  # puts oo_hash
   #the following is untested on :functional
   hash[:functional].collect do |key, val|
     func_hash[key] = val
@@ -53,7 +54,8 @@ def new_hash(hash)
   func_hash.collect do |key, val|
     func_hash[key][:style] = [:functional]
   end
-  puts func_hash
+  # puts func_hash
+  final_hash = oo_hash.merg(func_hash)
 end
 
 
