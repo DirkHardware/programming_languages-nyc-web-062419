@@ -36,6 +36,21 @@ languages = {
 
 # the following can be used to create a new hash out of either top level values
 # all thats needed afterwards is to add the :style key/value to each languages value
+
+def new_hash2(hash)
+  new_hash = {}
+  hash[:oo].collect do |key, val|
+    new_hash[key] = val
+    new_hash[val][style] = [:oo]
+  end
+  #the following is untested on :functional
+  hash[:functional].collect do |key, val|
+    new_hash[key] = val
+  end
+  new_hash
+end
+
+
 def new_hash(hash)
   new_hash = {}
   hash[:oo].collect do |key, val|
