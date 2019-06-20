@@ -77,16 +77,16 @@ def reformat_languages(languages)
   hash[:oo].each do |key, val|
     oo_hash[key] = val
   end
-  oo_hash.collect do |key, val|
+  oo_hash.each do |key, val|
     oo_hash[key][:style] = [:oo]
   end
   oo_hash[:javascript][:style] = [:oo, :functional]
   #the following is untested on :functional
-  hash[:functional].collect do |key, val|
+  hash[:functional].each do |key, val|
     func_hash[key] = val
   end
   func_hash.delete(:javascript)
-  func_hash.collect do |key, val|
+  func_hash.each do |key, val|
     func_hash[key][:style] = [:functional]
   end
   final_hash = oo_hash.merge(func_hash)
