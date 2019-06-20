@@ -51,7 +51,7 @@ def new_hash(hash)
   end
   func_hash.delete(:javascript)
   func_hash.collect do |key, val|
-    oo_hash[key][:style] = [:functional]
+    func_hash[key][:style] = [:functional]
   end
   puts func_hash
 end
