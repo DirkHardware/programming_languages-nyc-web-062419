@@ -38,6 +38,10 @@ def new_hash(hash)
   oo_hash = {}
   func_hash = {}
   hash[:oo].collect do |key, val|
+    if val == :javascript
+      1.times do 
+      end 
+    end 
     oo_hash[key] = val
   end
   puts oo_hash
