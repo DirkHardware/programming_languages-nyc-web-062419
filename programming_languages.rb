@@ -74,7 +74,7 @@ def reformat_languages(languages)
   oo_hash = {}
   func_hash = {}
   final_hash = {}
-  hash[:oo].collect do |key, val|
+  hash[:oo].each do |key, val|
     oo_hash[key] = val
   end
   oo_hash.collect do |key, val|
