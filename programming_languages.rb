@@ -50,6 +50,8 @@ def new_hash(hash)
     func_hash[key] = val
   end
   func_hash.delete(:javascript)
+  func_hash.collect do |key, val|
+    oo_hash[key][:style] = [:functional]
   puts func_hash
 end
 
