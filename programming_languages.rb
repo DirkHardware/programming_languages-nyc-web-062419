@@ -40,6 +40,7 @@ def new_hash(hash)
   hash[:oo].collect do |key, val|
     oo_hash[key] = val
   end
+  oo_hash.delete(:javascript)
   puts oo_hash
   #the following is untested on :functional
   hash[:functional].collect do |key, val|
