@@ -37,8 +37,8 @@ languages = {
 def test_hash(hash)
   experiment = {}
   hash[:oo].collect do |key, val|
-    new_hash[key] = val
-    new_hash[val]
+    puts key
+    puts val
   end
 end
 
