@@ -57,19 +57,37 @@ def new_hash(hash)
 end
 
 
-def new_hash(hash)
-  new_hash = {}
-  hash[:oo].collect do |key, val|
-    new_hash[key] = val
-  end
-  #the following is untested on :functional
-  hash[:functional].collect do |key, val|
-    new_hash[key] = val
-  end
-  new_hash
-end
+# def new_hash(hash)
+#   new_hash = {}
+#   hash[:oo].collect do |key, val|
+#     new_hash[key] = val
+#   end
+#   #the following is untested on :functional
+#   hash[:functional].collect do |key, val|
+#     new_hash[key] = val
+#   end
+#   new_hash
+# end
 
 
 def reformat_languages(languages)
-  # your code here
+  oo_hash = {}
+  func_hash = {}
+  hash[:oo].collect do |key, val|
+    oo_hash[key] = val
+  end
+  oo_hash.collect do |key, val|
+    oo_hash[key][:style] = [:oo]
+  end
+  oo_hash[:javascript][:style] = [:oo, :functional]
+  puts oo_hash
+  #the following is untested on :functional
+  hash[:functional].collect do |key, val|
+    func_hash[key] = val
+  end
+  func_hash.delete(:javascript)
+  func_hash.collect do |key, val|
+    func_hash[key][:style] = [:functional]
+  end
+  puts func_hash
 end
