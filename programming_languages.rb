@@ -34,12 +34,18 @@ languages = {
  }
 }
 
-def test_hash(hash)
-  experiment = {}
+def new_hash(hash)
+  oo_hash = {}
+  func_hash = {}
   hash[:oo].collect do |key, val|
-    puts key
-    puts val
+    oo_hash[key] = val
   end
+  puts oo_hash
+  #the following is untested on :functional
+  hash[:functional].collect do |key, val|
+    func_hash[key] = val
+  end
+  puts func_hash
 end
 
 
