@@ -55,7 +55,7 @@ def new_hash(hash)
     func_hash[key][:style] = [:functional]
   end
   # puts func_hash
-  final_hash = oo_hash.merg(func_hash)
+  final_hash = oo_hash.merge(func_hash)
 end
 
 
