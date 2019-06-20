@@ -40,7 +40,6 @@ def test_hash(hash)
     puts key
     puts val
   end
-  experiment
 end
 
 
