@@ -38,12 +38,7 @@ def new_hash(hash)
   oo_hash = {}
   func_hash = {}
   hash[:oo].collect do |key, val|
-    if val == :javascript
-      1.times do
-      end
-    else
     oo_hash[key] = val
-    end
   end
   puts oo_hash
   #the following is untested on :functional
