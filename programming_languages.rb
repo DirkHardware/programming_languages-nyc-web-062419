@@ -34,9 +34,6 @@ languages = {
  }
 }
 
-# the following can be used to create a new hash out of either top level values
-# all thats needed afterwards is to add the :style key/value to each languages value
-
 
 def new_hash(hash)
   new_hash = {}
