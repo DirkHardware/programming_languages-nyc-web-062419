@@ -43,7 +43,7 @@ def new_hash(hash)
   oo_hash.collect do |key, val|
     oo_hash[key][:style] = [:oo]
   end
-  oo_hash[:javascript][:style] = [:oo, :functional] 
+  oo_hash[:javascript][:style] = [:oo, :functional]
   puts oo_hash
   #the following is untested on :functional
   hash[:functional].collect do |key, val|
