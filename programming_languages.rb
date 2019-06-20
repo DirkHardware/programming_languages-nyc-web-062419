@@ -46,6 +46,7 @@ def new_hash2(hash)
   #the following is untested on :functional
   hash[:functional].collect do |key, val|
     new_hash[key] = val
+    new_hash[val][style] = [:functional]
   end
   new_hash
 end
