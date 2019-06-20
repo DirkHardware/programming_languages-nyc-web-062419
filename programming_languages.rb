@@ -41,8 +41,9 @@ def new_hash(hash)
     if val == :javascript
       1.times do
       end
-    end
+    else
     oo_hash[key] = val
+    end
   end
   puts oo_hash
   #the following is untested on :functional
